@@ -31,6 +31,8 @@ spec:
             - mountPath: /bin/docker
               name: docker-bin
           resources:
+            requests:
+              cpu: "250m"
             limits:
               cpu: "750m"
       volumes:
