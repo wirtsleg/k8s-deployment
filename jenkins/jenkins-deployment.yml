@@ -30,6 +30,9 @@ spec:
               name: docker-sock-volume
             - mountPath: /bin/docker
               name: docker-bin
+          resources:
+            limits:
+              cpu: "750m"
       volumes:
         - name: jenkins-volume
           hostPath:
