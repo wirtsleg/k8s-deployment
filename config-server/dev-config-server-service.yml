@@ -1,13 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: config-server-service
+  name: config-server
   namespace: dev
 spec:
   selector:
     app: config-server
-#  type: ExternalName
-#  externalName: config-server
   ports:
     - protocol: TCP
       port: 80
