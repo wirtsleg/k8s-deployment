@@ -5,7 +5,7 @@ pipeline {
         stage('Apply yamls') {
             steps {
                 dir("config-server") {
-                    sh "kubectl apply --force -f dev-config-server-deployment.yml,dev-config-server-service.yml"
+                    sh "kubectl apply --namespace=dev --force -f config-server-deployment.yml,config-server-service.yml"
                 }
             }
         }
