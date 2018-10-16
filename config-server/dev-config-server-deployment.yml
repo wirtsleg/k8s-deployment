@@ -22,7 +22,7 @@ spec:
             - containerPort: 8888
           volumeMounts:
             - name: config-volume
-              mountPath: /app/
+              mountPath: /app/config/
       volumes:
         - name: config-volume
           configMap:
