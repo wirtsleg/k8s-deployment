@@ -8,7 +8,8 @@ RUN mkdir -p /tmp/download && \
  rm -rf /tmp/download/docker/dockerd && \
  mv /tmp/download/docker/docker* /usr/local/bin/ && \
  rm -rf /tmp/download && \
- groupadd docker
+ groupadd docker && \
+ usermod -a -G docker jenkins
 
 # Install kubectl
 RUN apt-get update && \
