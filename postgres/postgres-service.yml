@@ -2,6 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: postgres
+  namespace: dev
 spec:
   selector:
     app: postgres
