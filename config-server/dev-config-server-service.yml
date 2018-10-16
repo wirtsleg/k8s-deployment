@@ -6,8 +6,9 @@ metadata:
 spec:
   selector:
     app: config-server
-  type: ExternalName
-  externalName: config-server
+#  type: ExternalName
+#  externalName: config-server
   ports:
-    - port: 8888
+    - protocol: TCP
+      port: 80
       targetPort: 8888
