@@ -19,12 +19,3 @@ spec:
           image: kozhenkov/config-server:latest
           ports:
             - containerPort: 8888
-          volumeMounts:
-            - name: config-volume
-              mountPath: /app/config
-      volumes:
-        - name: config-volume
-          configMap:
-            # Provide the name of the ConfigMap containing the files you want
-            # to add to the container
-            name: config-server-cm
