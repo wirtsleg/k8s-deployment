@@ -18,4 +18,19 @@ spec:
         - name: config-server
           image: kozhenkov/config-server:latest
           ports:
-            - containerPort: 8888
+            - name: http-port
+              containerPort: 8888
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http-port
+            initialDelaySeconds: 10
+            failureThreshold: 10
+            timeoutSeconds: 2
+            periodSeconds: 2
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: http-port
+            initialDelaySeconds: 45
+            timeoutSeconds: 2
