@@ -54,8 +54,10 @@ downloadDashboardsImage:
 ## ref: http://kubernetes.io/docs/user-guide/services/
 ##
 service:
-  type: ExternalIP
+  type: NodePort
   port: 9000
+  externalIPs:
+    - 142.93.163.95
   annotations: {}
   labels: {}
 
