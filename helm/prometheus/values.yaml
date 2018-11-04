@@ -678,12 +678,13 @@ server:
     ## List of IP addresses at which the Prometheus server service is available
     ## Ref: https://kubernetes.io/docs/user-guide/services/#external-ips
     ##
-    externalIPs: []
+    externalIPs:
+      - 142.93.163.95
 
     loadBalancerIP: ""
     loadBalancerSourceRanges: []
-    servicePort: 80
-    type: ClusterIP
+    servicePort: 9100
+    type: NodePort
 
   ## Prometheus server pod termination grace period
   ##
