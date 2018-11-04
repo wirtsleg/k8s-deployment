@@ -54,8 +54,8 @@ downloadDashboardsImage:
 ## ref: http://kubernetes.io/docs/user-guide/services/
 ##
 service:
-  type: ClusterIP
-  port: 80
+  type: ExternalIP
+  port: 9000
   annotations: {}
   labels: {}
 
