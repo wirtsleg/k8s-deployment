@@ -1,0 +1,11 @@
+apiVersion: v1
+appVersion: 0.0.12
+description: A Helm chart for Elasticsearch operator
+maintainers:
+- email: alen.komljen@live.com
+  name: komljen
+  url: https://akomljen.com
+name: elasticsearch-operator
+sources:
+- https://github.com/upmc-enterprises/elasticsearch-operator
+version: 0.1.5
